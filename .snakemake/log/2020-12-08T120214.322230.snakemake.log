@@ -1,0 +1,81 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 1000
+Job counts:
+	count	jobs
+	1	all
+	6	bam2fastq
+	7
+Select jobs to execute...
+
+[Tue Dec  8 12:02:15 2020]
+rule bam2fastq:
+    input: /fast/users/szyskam_c/work/NGSData/GDC/orgbam/2935-03A-01W-0745-08.14.bam
+    output: fastq/2935_A4_R1.fastq.gz, fastq/2935_A4_R2.fastq.gz
+    jobid: 34
+    reason: Missing output files: fastq/2935_A4_R1.fastq.gz, fastq/2935_A4_R2.fastq.gz
+    wildcards: sample=2935_A4
+    threads: 20
+
+picard -Xmx60G SamToFastq use_jdk_deflater=true use_jdk_inflater=true I=/fast/users/szyskam_c/work/NGSData/GDC/orgbam/2935-03A-01W-0745-08.14.bam F=>(gzip > fastq/2935_A4_R1.fastq.gz) F2=>(gzip > fastq/2935_A4_R2.fastq.gz) NON_PF=TRUE VALIDATION_STRINGENCY=LENIENT TMP_DIR=$TMPDIR
+Submitted DRMAA job 34 with external jobid 124065.
+
+[Tue Dec  8 12:02:15 2020]
+rule bam2fastq:
+    input: /fast/users/szyskam_c/work/NGSData/GDC/orgbam/2941-03A-01W-0745-08.14.bam
+    output: fastq/2941_A4_R1.fastq.gz, fastq/2941_A4_R2.fastq.gz
+    jobid: 36
+    reason: Missing output files: fastq/2941_A4_R1.fastq.gz, fastq/2941_A4_R2.fastq.gz
+    wildcards: sample=2941_A4
+    threads: 20
+
+picard -Xmx60G SamToFastq use_jdk_deflater=true use_jdk_inflater=true I=/fast/users/szyskam_c/work/NGSData/GDC/orgbam/2941-03A-01W-0745-08.14.bam F=>(gzip > fastq/2941_A4_R1.fastq.gz) F2=>(gzip > fastq/2941_A4_R2.fastq.gz) NON_PF=TRUE VALIDATION_STRINGENCY=LENIENT TMP_DIR=$TMPDIR
+Submitted DRMAA job 36 with external jobid 124066.
+
+[Tue Dec  8 12:02:15 2020]
+rule bam2fastq:
+    input: /fast/users/szyskam_c/work/NGSData/GDC/orgbam/2928-03A-01W-0745-08.8.bam
+    output: fastq/2928_A_R1.fastq.gz, fastq/2928_A_R2.fastq.gz
+    jobid: 30
+    reason: Missing output files: fastq/2928_A_R2.fastq.gz, fastq/2928_A_R1.fastq.gz
+    wildcards: sample=2928_A
+    threads: 20
+
+picard -Xmx60G SamToFastq use_jdk_deflater=true use_jdk_inflater=true I=/fast/users/szyskam_c/work/NGSData/GDC/orgbam/2928-03A-01W-0745-08.8.bam F=>(gzip > fastq/2928_A_R1.fastq.gz) F2=>(gzip > fastq/2928_A_R2.fastq.gz) NON_PF=TRUE VALIDATION_STRINGENCY=LENIENT TMP_DIR=$TMPDIR
+Submitted DRMAA job 30 with external jobid 124067.
+
+[Tue Dec  8 12:02:15 2020]
+rule bam2fastq:
+    input: /fast/users/szyskam_c/work/NGSData/GDC/orgbam/2928-11A-01W-0745-08.8.bam
+    output: fastq/2928_B_R1.fastq.gz, fastq/2928_B_R2.fastq.gz
+    jobid: 31
+    reason: Missing output files: fastq/2928_B_R1.fastq.gz, fastq/2928_B_R2.fastq.gz
+    wildcards: sample=2928_B
+    threads: 20
+
+picard -Xmx60G SamToFastq use_jdk_deflater=true use_jdk_inflater=true I=/fast/users/szyskam_c/work/NGSData/GDC/orgbam/2928-11A-01W-0745-08.8.bam F=>(gzip > fastq/2928_B_R1.fastq.gz) F2=>(gzip > fastq/2928_B_R2.fastq.gz) NON_PF=TRUE VALIDATION_STRINGENCY=LENIENT TMP_DIR=$TMPDIR
+Submitted DRMAA job 31 with external jobid 124068.
+
+[Tue Dec  8 12:02:15 2020]
+rule bam2fastq:
+    input: /fast/users/szyskam_c/work/NGSData/GDC/orgbam/2935-11A-01W-0745-08.9.bam
+    output: fastq/2935_B_R1.fastq.gz, fastq/2935_B_R2.fastq.gz
+    jobid: 35
+    reason: Missing output files: fastq/2935_B_R1.fastq.gz, fastq/2935_B_R2.fastq.gz
+    wildcards: sample=2935_B
+    threads: 20
+
+picard -Xmx60G SamToFastq use_jdk_deflater=true use_jdk_inflater=true I=/fast/users/szyskam_c/work/NGSData/GDC/orgbam/2935-11A-01W-0745-08.9.bam F=>(gzip > fastq/2935_B_R1.fastq.gz) F2=>(gzip > fastq/2935_B_R2.fastq.gz) NON_PF=TRUE VALIDATION_STRINGENCY=LENIENT TMP_DIR=$TMPDIR
+Submitted DRMAA job 35 with external jobid 124069.
+
+[Tue Dec  8 12:02:15 2020]
+rule bam2fastq:
+    input: /fast/users/szyskam_c/work/NGSData/GDC/orgbam/2941-11A-01W-0745-08.8.bam
+    output: fastq/2941_B_R1.fastq.gz, fastq/2941_B_R2.fastq.gz
+    jobid: 37
+    reason: Missing output files: fastq/2941_B_R1.fastq.gz, fastq/2941_B_R2.fastq.gz
+    wildcards: sample=2941_B
+    threads: 20
+
+picard -Xmx60G SamToFastq use_jdk_deflater=true use_jdk_inflater=true I=/fast/users/szyskam_c/work/NGSData/GDC/orgbam/2941-11A-01W-0745-08.8.bam F=>(gzip > fastq/2941_B_R1.fastq.gz) F2=>(gzip > fastq/2941_B_R2.fastq.gz) NON_PF=TRUE VALIDATION_STRINGENCY=LENIENT TMP_DIR=$TMPDIR
+Submitted DRMAA job 37 with external jobid 124070.

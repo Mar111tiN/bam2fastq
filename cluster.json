@@ -8,7 +8,7 @@
   },
   "bam2fastq": {
     "t": "01:30",
-    "mem": 2000,
+    "mem": 3500,
     "name": "{rule}:{wildcards.sample}"
   }
 }

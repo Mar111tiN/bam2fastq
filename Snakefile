@@ -33,13 +33,14 @@ rule bam2fastq:
         fastq1 = "fastq/{sample}_R1.fastq.gz",
         fastq2 = "fastq/{sample}_R2.fastq.gz"
     threads:
-        24
+        20
     conda:
         "align-env.yml"
     params:
         deflater = "use_jdk_deflater=true use_jdk_inflater=true"
     shell:
-        "picard -Xmx70G SamToFastq {params.deflater} "
+        "picard -Xmx60G SamToFastq {params.deflater} "
         "I={input.bam} F=>(gzip > {output.fastq1}) F2=>(gzip > {output.fastq2}) "
         "NON_PF=TRUE "
+        "VALIDATION_STRINGENCY=LENIENT "
         "TMP_DIR=$TMPDIR"
