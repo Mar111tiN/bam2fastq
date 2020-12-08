@@ -28,7 +28,7 @@ rule all:
 
 rule bam2fastq:
     input:
-        get_bam
+        bam = get_bam
     output:
         fastq1 = "fastq/{sample}_R1.fastq.gz",
         fastq2 = "fastq/{sample}_R2.fastq.gz"
