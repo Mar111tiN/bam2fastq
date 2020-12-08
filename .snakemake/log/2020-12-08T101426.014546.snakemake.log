@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 28 of /fast/home/users/szyskam_c/snakes/develop/bam2fastq/Snakefile:
+Missing input files for rule bam2fastq:
+25b.bam

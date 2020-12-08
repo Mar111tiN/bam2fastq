@@ -1,0 +1,14 @@
+{
+  "__default__": {
+    "t": "00:45",
+    "mem": "1000",
+    "nodes": 1,
+    "partition": "short",
+    "threads": "{threads}"
+  },
+  "bam2fastq": {
+    "t": "01:30",
+    "mem": 2000,
+    "name": "{rule}:{wildcards.sample}"
+  }
+}
