@@ -42,7 +42,7 @@ echo $CONDA_PREFIX "activated";
 # !!! leading white space is important
 DRMAA=" -p {cluster.partition} -t {cluster.t} --mem-per-cpu={cluster.mem} -J {cluster.name} --nodes={cluster.nodes} -n {cluster.threads}";
 DRMAA="$DRMAA -o ${LOGDIR}/{rule}-%j.log";
-snakemake --unlock -s SnakefileRerun --rerun-incomplete;
+snakemake --unlock --rerun-incomplete;
 snakemake --dag | awk '$0 ~ "digraph" {p=1} p' | dot -Tsvg > dax/dag.svg;
 snakemake --use-conda --rerun-incomplete --cluster-config cluster.json --drmaa "$DRMAA" -prk -j 1000;
 # -k ..keep going if job fails
