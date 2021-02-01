@@ -37,3 +37,6 @@ bam	sample	R1	R2
 2949-11A-01W-0732-08.4.bam	2949_B	2949_B_R1.fastq.gz	2949_B_R2.fastq.gz
 2952-03A-01W-0733-08.4.bam	2952_A	2952_A_R1.fastq.gz	2952_A_R2.fastq.gz
 2952-11A-01W-0732-08.4.bam	2952_B	2952_B_R1.fastq.gz	2952_B_R2.fastq.gz
+38-03A-01W-0726-08.4.bam	2838_A	2838_A_R1.fastq.gz	2838_A_R2.fastq.gz
+2928-11A-01W-0745-08.8.bam	2928_B	2928_B_R1.fastq.gz	2928_B_R2.fastq.gz
+2935-11A-01W-0745-08.9.bam	2935_B	2935_B_R1.fastq.gz	2935_B_R2.fastq.gz

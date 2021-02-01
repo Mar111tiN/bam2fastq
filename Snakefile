@@ -7,7 +7,7 @@ import pandas as pd
 
 workdir: "/fast/users/szyskam_c/scratch/projects/GDCrest/"
 bamdir = "/fast/users/szyskam_c/work/NGSData/GDC/orgbam"
-sample_sheet = "/fast/users/szyskam_c/snakes/develop/bam2fastq/sheets/GDC_large.txt"
+sample_sheet = "/fast/users/szyskam_c/snakes/develop/bam2fastq/sheets/GDC_samples.txt"
 
 # get the sample_df
 sample_df = pd.read_csv(sample_sheet, sep='\t')

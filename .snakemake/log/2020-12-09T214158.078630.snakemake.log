@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Creating conda environment /fast/home/users/szyskam_c/snakes/develop/bam2fastq/align-env.yml...
+Downloading and installing remote packages.
+Environment for ../../../../../home/users/szyskam_c/snakes/develop/bam2fastq/align-env.yml created (location: .snakemake/conda/e43a1a60)
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	38	bam2fastq
+	39
+Select jobs to execute...
+
+[Wed Dec  9 21:44:57 2020]
+rule bam2fastq:
+    input: /fast/users/szyskam_c/work/NGSData/GDC/orgbam/47-03B-01W-0728-08.3.bam
+    output: fastq/2847_A_R1.fastq.gz, fastq/2847_A_R2.fastq.gz, fastq/2847_A_unpaired.fastq.gz
+    jobid: 7
+    reason: Missing output files: fastq/2847_A_R1.fastq.gz, fastq/2847_A_R2.fastq.gz
+    wildcards: sample=2847_A
+    threads: 8
+
+samtools sort -n /fast/users/szyskam_c/work/NGSData/GDC/orgbam/47-03B-01W-0728-08.3.bam | samtools fastq -0 fastq/2847_A_unpaired.fastq.gz -1 fastq/2847_A_R1.fastq.gz -2 fastq/2847_A_R2.fastq.gz -@ 8 -
+Activating conda environment: /fast/scratch/users/szyskam_c/projects/GDCrest/.snakemake/conda/e43a1a60
+Terminating processes on user request, this might take some time.
+[Wed Dec  9 21:47:07 2020]
+Error in rule bam2fastq:
+    jobid: 7
+    output: fastq/2847_A_R1.fastq.gz, fastq/2847_A_R2.fastq.gz, fastq/2847_A_unpaired.fastq.gz
+    conda-env: /fast/scratch/users/szyskam_c/projects/GDCrest/.snakemake/conda/e43a1a60
+    shell:
+        samtools sort -n /fast/users/szyskam_c/work/NGSData/GDC/orgbam/47-03B-01W-0728-08.3.bam | samtools fastq -0 fastq/2847_A_unpaired.fastq.gz -1 fastq/2847_A_R1.fastq.gz -2 fastq/2847_A_R2.fastq.gz -@ 8 -
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: /fast/home/users/szyskam_c/snakes/develop/bam2fastq/.snakemake/log/2020-12-09T214158.078630.snakemake.log
